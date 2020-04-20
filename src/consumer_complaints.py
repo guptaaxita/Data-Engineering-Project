@@ -72,7 +72,7 @@ def create_reports(input_path, output_path, input_filename, output_filename, fla
 
     print('There are {} products: ({})'.format(len(set(list_product)), flag))
     for product in set(list_product):
-        print('"', product, '"', sep='')
+        print('\"', product, '\"', sep='')
     print('\n')
         
     # Extracting year from date of product complaint received and add Year as a new dictionary key with values in d
@@ -90,7 +90,7 @@ def create_reports(input_path, output_path, input_filename, output_filename, fla
     # Count total number of complaints for each product and year
     print('Total number of complaints for each product and year: ({})'.format(flag))
     for prod_yr in set(prod_yr_list):
-        print('"', prod_yr[0], '", ', prod_yr[1], ', ',
+        print('\"', prod_yr[0], '\", ', prod_yr[1], ', ',
               len(set([j for i, j in zip(prod_yr_list, list_issue) if i == prod_yr])), sep='')
     print('\n')
 
