@@ -13,8 +13,8 @@ if sys.platform == 'win32':
 else:
     input_path = os.getcwd() + '/input/'
     output_path = os.getcwd() + '/output/'
-    test_input_path = os.getcwd() + '/insight_testsuite/input/'
-    test_output_path = os.getcwd() + '/insight_testsuite/output/'
+    test_input_path = os.getcwd() + '/insight_testsuite/test_input/'
+    test_output_path = os.getcwd() + '/insight_testsuite/test_output/'
 
 def check_filename(filename):
     
