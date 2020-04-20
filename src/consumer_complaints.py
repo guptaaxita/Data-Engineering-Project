@@ -11,10 +11,10 @@ if sys.platform == 'win32':
     test_input_path = os.getcwd() + '\\insight_testsuite\\test_input\\'
     test_output_path = os.getcwd() + '\\insight_testsuite\\test_output\\'
 else:
-    input_path = './input/'
-    output_path = './output/'
-    test_input_path = './insight_testsuite/test_input/'
-    test_output_path = './insight_testsuite/test_output/'
+    input_path = sys.argv[1]
+    output_path = sys.argv[2]
+    test_input_path = sys.argv[3]
+    test_output_path = sys.argv[4]
 
 def check_filename(filename):
     
