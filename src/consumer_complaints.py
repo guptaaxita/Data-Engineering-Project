@@ -10,13 +10,11 @@ if sys.platform == 'win32':
     output_path = os.getcwd() + '\\output\\'
     test_input_path = os.getcwd() + '\\insight_testsuite\\test_input\\'
     test_output_path = os.getcwd() + '\\insight_testsuite\\test_output\\'
-elif sys.platform == 'linux':
+else:
     input_path = os.getcwd() + '/input/'
     output_path = os.getcwd() + '/output/'
     test_input_path = os.getcwd() + '/insight_testsuite/input/'
     test_output_path = os.getcwd() + '/insight_testsuite/output/'
-else:
-    sys.exit('The code works either on linux or windows only')
 
 def check_filename(filename):
     
