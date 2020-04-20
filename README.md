@@ -1,4 +1,4 @@
-# Insight_Data-_Engineering_Challenge
+# Insight Data Engineering Challenge
 Summarize consumers complaints data for financial companies
 
 Solution to this coding challenge is provided using python 3.7.3
@@ -18,16 +18,10 @@ Solution to this coding challenge is provided using python 3.7.3
 5)	Calculate highest percentage of total complaints filed against one company for that product and year. 
 
 ## Summary
-### Relevant functions
+### Relevant python dependencies
+os - for path 
 sys - provides information about constants, functions and methods of the Python interpreter
 csv – used to import data in csv file format
 datatime – used to extract year from date YYYY-MM-DD 
 
-  In this task **complaints.csv** file is the input file found in input folder. Output file **report.csv** is output file showing total number of complaints and how they're spread across different companies for each product and year. The script generated using Python 3.7.3 provides information about total number of complaints received for each product year combination, total number of companies for each product year combination and highest percentage of total complaints filed against one company for that product and year. Results are generated in following format as required:
-  
-"bank account or service",2012,5,98,5
-"bank account or service",2013,5,164,3
-"bank account or service",2014,5,258,2
-"bank account or service",2015,5,215,2
-"bank account or service",2016,5,230,2
-"bank account or service",2017,5,174,3
+  In this task **complaints.csv** file is the input file found in input folder. Output file **report.csv** is output file showing total number of complaints and how they're spread across different companies for each product and year. The script generated using Python 3.7.3 provides information about total number of complaints received for each product year combination, total number of companies for each product year combination and highest percentage of total complaints filed against one company for that product and year.
