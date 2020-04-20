@@ -15,8 +15,6 @@ else:
     output_path = sys.argv[2]
     test_input_path = sys.argv[3]
     test_output_path = sys.argv[4]
-    
-print('Total number of arguments:', len(sys.argv))
 
 def check_filename(filename):
     

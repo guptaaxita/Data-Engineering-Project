@@ -8,7 +8,7 @@ from datetime import datetime
 if sys.platform == 'win32':
     output_path = os.getcwd() + '\\insight_testsuite\\test_output\\'
 elif sys.platform == 'linux':
-    output_path = os.getcwd() + 'insight_testsuite/test_output/'
+    output_path = sys.argv[1]
     
 # Importing report_test.csv to test results are correct
 file=open(output_path+'report_test.csv','r')
