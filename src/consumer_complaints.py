@@ -50,7 +50,11 @@ def create_reports(input_path, output_path, input_filename, output_filename, fla
     check_filename(output_filename)
     
     # Read given csv data as a dictionary object
-    file=open(input_path+input_filename,'r', encoding = 'utf-8')
+    if sys.platform == 'win32':
+        file=open(input_path+input_filename,'r', encoding = 'utf-8')
+    else:
+        file=open(input_path+input_filename,'r')
+        
     reader=csv.DictReader(file)
 
     # Make a list of ordered dictionary with keys as column name for each dictionaryds=[]
