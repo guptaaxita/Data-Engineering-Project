@@ -25,3 +25,5 @@ csv – used to import data in csv file format
 datatime – used to extract year from date YYYY-MM-DD 
 
   In this task **complaints.csv** file is the input file found in input folder. Output file **report.csv** is output file showing total number of complaints and how they're spread across different companies for each product and year. The script generated using Python 3.7.3 provides information about total number of complaints received for each product year combination, total number of companies for each product year combination and highest percentage of total complaints filed against one company for that product and year.
+  
+  The code generated in this task works for both windows and linux operating systems. The run.sh file is generated only for non windows operating systems. A seperate run_test.sh file is provided in testing suite (insight_testsuite) to test and compare the reults against the known results.

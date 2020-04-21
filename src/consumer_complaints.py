@@ -6,15 +6,15 @@ import csv
 from datetime import datetime
 
 if sys.platform == 'win32':
-    input_path = os.getcwd() + '\\input\\'
-    output_path = os.getcwd() + '\\output\\'
-    test_input_path = os.getcwd() + '\\insight_testsuite\\test_input\\'
-    test_output_path = os.getcwd() + '\\insight_testsuite\\test_output\\'
+    input_path = os.getcwd() + sys.argv[1]
+    output_path = os.getcwd() + sys.argv[2]
+    input_filename = sys.argv[3]
+    output_filename = sys.argv[4]
 else:
     input_path = sys.argv[1]
     output_path = sys.argv[2]
-    test_input_path = sys.argv[3]
-    test_output_path = sys.argv[4]
+    input_filename = sys.argv[3]
+    output_filename = sys.argv[4]
 
 def check_filename(filename):
     
@@ -137,10 +137,6 @@ def create_reports(input_path, output_path, input_filename, output_filename, fla
         for key in sorted(d_final_result.keys()):
             f.write("%s,%s,%s,%s,%s\n"%('"'+key[0]+'"', key[1], 
                                         d_final_result[key][0], d_final_result[key][1], d_final_result[key][2]))
-            
-    
-# Run the script for a sample dataset:
-create_reports(test_input_path, test_output_path, 'complaints_test.csv', 'report_test.csv', flag = 'sample data')
 
 # Run the script on the whole dataset:
-create_reports(input_path, output_path, 'complaints.csv', 'report.csv')
+create_reports(input_path, output_path, input_filename, output_filename)
