@@ -15,10 +15,10 @@ file=open(output_path+'report_test.csv','r')
 reader=csv.reader(file)
 
 # Sample results to test function
-test_result_1 = ["debt collection",'2020','2','4','50']
+test_result_1 = ["debt collection",'2019','10','10','100']
 test_result_2 = ["payday loan, title loan, or personal loan",'2019','1','1','100']
 test_result_3 = ["credit card or prepaid card",'2019','4','4','100']
-test_result_4 = ["debt collection",'2020','2','4','50']
+test_result_4 = ["debt collection",'2020','6','4','67']
 
 answer_list = []
 for i, row in enumerate(reader):

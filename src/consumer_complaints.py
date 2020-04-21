@@ -95,7 +95,7 @@ def create_reports(input_path, output_path, input_filename, output_filename, fla
     print('Total number of complaints for each product and year: ({})'.format(flag))
     for prod_yr in set(prod_yr_list):
         print(prod_yr[0], ', ', prod_yr[1], ', ',
-              len(set([j for i, j in zip(prod_yr_list, list_issue) if i == prod_yr])))
+              len([j for i, j in zip(prod_yr_list, list_issue) if i == prod_yr]))
     print('\n')
 
     # Check if no issues exist for any date (extract index for the data when issues are not empty)
@@ -117,7 +117,7 @@ def create_reports(input_path, output_path, input_filename, output_filename, fla
     # Merging total number of issues and total number of companies
     tot_issue = {}; tot_company = {}
     for prod_yr in set(prod_yr_list):
-        tot_issue[prod_yr] = len(set([j for i, j in zip(prod_yr_list, list_issue) if i == prod_yr]))
+        tot_issue[prod_yr] = len([j for i, j in zip(prod_yr_list, list_issue) if i == prod_yr])
 
     for prod_yr in set(prod_yr_list):
         tot_company[prod_yr] = len(set([j for i, j in zip(prod_yr_list, list_company) if i == prod_yr]))
@@ -130,7 +130,7 @@ def create_reports(input_path, output_path, input_filename, output_filename, fla
     # Generating final results - Highest percentage of total complaints/issues filed against one complay for that product /year 
     d_final_result = {}
     for k, v in d_result.items():
-        d_final_result[k] = tuple((v[0], v[1], round(100*v[0]/v[1])))
+        d_final_result[k] = tuple((v[0], v[1], round(100*v[1]/v[0])))
 
     # Writing and exporting results "report.csv"
     with open(output_path+output_filename, 'w') as f:
