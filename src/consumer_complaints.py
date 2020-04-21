@@ -135,8 +135,12 @@ def create_reports(input_path, output_path, input_filename, output_filename, fla
     # Writing and exporting results "report.csv"
     with open(output_path+output_filename, 'w') as f:
         for key in sorted(d_final_result.keys()):
-            f.write("%s,%s,%s,%s,%s\n"%('"'+key[0]+'"', key[1], 
-                                        d_final_result[key][0], d_final_result[key][1], d_final_result[key][2]))
+            if "," in key[0]:
+                f.write("%s,%s,%s,%s,%s\n"%('"'+key[0]+'"', key[1],
+                                            d_final_result[key][0], d_final_result[key][1], d_final_result[key][2]))
+            else:
+                f.write("%s,%s,%s,%s,%s\n"%(key[0], key[1], 
+                                            d_final_result[key][0], d_final_result[key][1], d_final_result[key][2]))
 
 # Run the script on the whole dataset:
 create_reports(input_path, output_path, input_filename, output_filename)
