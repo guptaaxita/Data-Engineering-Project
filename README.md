@@ -1,4 +1,4 @@
-# Insight Data Engineering Challenge
+# Data Engineering Challenge
 Summarize consumers complaints data for financial companies
 
 Solution to this coding challenge is provided using python 3.7.3
